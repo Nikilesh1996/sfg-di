@@ -6,7 +6,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import nikilesh.springframework.sfgdi.services.GreetingService;
-import nikilesh.springframework.sfgdi.services.GreetingServiceImpl;
+import nikilesh.springframework.sfgdi.services.ConstructorInjectedGreetingServiceImpl;
 
 public class ConstructorInjectedControllerTest {
 
@@ -14,7 +14,7 @@ public class ConstructorInjectedControllerTest {
 	
 	@BeforeEach
 	public void setUp() {
-		GreetingService service = new GreetingServiceImpl();
+		GreetingService service = new ConstructorInjectedGreetingServiceImpl();
 		controller = new ConstructorInjectedController(service);
 	}
 	
